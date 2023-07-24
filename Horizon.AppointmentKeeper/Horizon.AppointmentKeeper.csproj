@@ -1,0 +1,141 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+
+		<PlatformTarget>AnyCPU</PlatformTarget>
+
+		<ProductName>Horizon Appointment Keeper</ProductName>
+		<Version>0.4.1</Version>
+		<Company>Horizon Managed Services</Company>
+		<Authors>Matthew Barbour</Authors>
+		<Copyright>Horizon Managed Services 2022</Copyright>
+		<ApplicationIcon>hak.ico</ApplicationIcon>
+		<AssemblyName>hak</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Sounds\Boys Choir Ahs ^.m4a" />
+		<None Remove="Sounds\choir full vibratto ^.m4a" />
+		<None Remove="Sounds\choir vFull Vibrato heavy.m4a" />
+		<None Remove="Sounds\classic vibrato pluck.m4a" />
+		<None Remove="Sounds\cliquer pluck.m4a" />
+		<None Remove="Sounds\cluster disaster.m4a" />
+		<None Remove="Sounds\digitalized square pluck 1of2.m4a" />
+		<None Remove="Sounds\digitalized square pluck 2of2.m4a" />
+		<None Remove="Sounds\flying wings of love.m4a" />
+		<None Remove="Sounds\FX-Powered-Arcade 01 bar.m4a" />
+		<None Remove="Sounds\harp glissandos retro.m4a" />
+		<None Remove="Sounds\house piano dark 1of2.m4a" />
+		<None Remove="Sounds\house piano dark 2of2.m4a" />
+		<None Remove="Sounds\Shrieker.m4a" />
+		<None Remove="Sounds\sonic Boom 1-2.m4a" />
+		<None Remove="Sounds\the big nasty.m4a" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="hak.ico">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\Boys Choir Ahs ^.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\choir full vibratto ^.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\choir vFull Vibrato heavy.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\classic vibrato pluck.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\cliquer pluck.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\cluster disaster.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\digitalized square pluck 1of2.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\digitalized square pluck 2of2.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\flying wings of love.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\FX-Powered-Arcade 01 bar.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\harp glissandos retro.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\house piano dark 1of2.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\house piano dark 2of2.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\Shrieker.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\sonic Boom 1-2.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Sounds\the big nasty.m4a">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Extended.Wpf.Toolkit" Version="4.4.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Graph" Version="4.42.0" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.47.2" />
+		<PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="2.24.0" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Horizon.Common">
+	    <HintPath>..\lib\Horizon.Common.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

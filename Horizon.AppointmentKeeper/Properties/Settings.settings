@@ -1,0 +1,114 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Horizon.AppointmentKeeper.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NormalColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#00FF00</Value>
+    </Setting>
+    <Setting Name="WarningColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FFFF00</Value>
+    </Setting>
+    <Setting Name="DangerColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF0000</Value>
+    </Setting>
+    <Setting Name="WarningThreshold" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:10:00</Value>
+    </Setting>
+    <Setting Name="DangerThreshold" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:05:00</Value>
+    </Setting>
+    <Setting Name="WindowX" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="WindowY" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AlwaysOnTop" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WindowHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">75</Value>
+    </Setting>
+    <Setting Name="WindowWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">220</Value>
+    </Setting>
+    <Setting Name="CustomWarningSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomDangerSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomExpiredSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TimerFontFamily" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TimerFontItalicized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GraphEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CalenderCheckTimeout" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:01:00</Value>
+    </Setting>
+    <Setting Name="GraphCalendar" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomEventChangeSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Mute" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MuteDangerSound" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MuteWarningSound" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MuteExpiredSound" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MuteEventChangeSound" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowNextEvent" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WindowOpacity" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="NextEventBackgroundColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#000000</Value>
+    </Setting>
+    <Setting Name="ExpiredSoundVolume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.45</Value>
+    </Setting>
+    <Setting Name="WarningSoundVolume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.45</Value>
+    </Setting>
+    <Setting Name="DangerSoundVolume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.45</Value>
+    </Setting>
+    <Setting Name="EventChangedSoundVolume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.45</Value>
+    </Setting>
+    <Setting Name="Volume" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="TimerFontBold" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="InfoStyle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Solid</Value>
+    </Setting>
+    <Setting Name="TimerSpace" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">800</Value>
+    </Setting>
+    <Setting Name="RefreshToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,95 @@
+﻿<Window x:Class="Horizon.AppointmentKeeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Horizon.AppointmentKeeper"
+        mc:Ignorable="d"
+        Title="HAK"
+        AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown" 
+        MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave" MinHeight="75" MinWidth="220"
+        MaxHeight="700"
+        Closing="Window_Closing"
+        ContentRendered="Window_ContentRendered"
+        ShowInTaskbar="false"
+        Topmost="{Binding Path=AlwaysOnTop}" LocationChanged="Window_LocationChanged"
+        Opacity="{Binding Path=WindowOpacity}" 
+        >
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{Binding Path=TimerSpace}"/>
+            <RowDefinition Height="{Binding Path=InfoSpace}" />
+        </Grid.RowDefinitions>
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0">
+            <TextBlock Foreground="{Binding Path=CurrentColor, Mode=OneWay}" 
+                       Text="{Binding Path=TimeRemaining}" 
+                       FontFamily="{Binding Path=FontFamily, Mode=OneWay}"
+                       FontStyle="{Binding Path=FontStyle, Mode=OneWay}"
+                       FontWeight="{Binding Path=FontWeight, Mode=OneWay}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+                      ShadowDepth="0"
+                      Direction="330"
+                      Color="{Binding Path=ShadowColor, Mode=OneWay}"
+                      Opacity="1"
+                     BlurRadius="1"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Viewbox>
+
+
+        <Thumb Name="RatioGripper" Height="10" Width="50"
+               Visibility="Hidden" DragDelta="RatioGripper_DragDelta"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom"
+               Cursor="SizeNS" />
+
+
+
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Visibility="{Binding Path=IsInfoStyleSolid}">
+            <TextBlock Foreground="{Binding Path=CurrentColor, Mode=OneWay}" 
+                       Text="{Binding Path=LowerSectionText}" 
+                       FontFamily="{Binding Path=FontFamily, Mode=OneWay}"
+                       FontStyle="{Binding Path=FontStyle, Mode=OneWay}"
+                       FontWeight="{Binding Path=FontWeight, Mode=OneWay}"
+                       Background="{Binding Path=BackgroundColor, Mode=OneWay}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">
+            </TextBlock>
+        </Viewbox>
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Visibility="{Binding Path=IsInfoStyleShadow}">
+            <TextBlock Foreground="{Binding Path=CurrentColor, Mode=OneWay}" 
+                       Text="{Binding Path=LowerSectionText}" 
+                       FontFamily="{Binding Path=FontFamily, Mode=OneWay}"
+                       FontStyle="{Binding Path=FontStyle, Mode=OneWay}"
+                       FontWeight="{Binding Path=FontWeight, Mode=OneWay}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect
+                      ShadowDepth="0"
+                      Direction="330"
+                      Color="{Binding Path=ShadowColor, Mode=OneWay}"
+                      Opacity="1"
+                     BlurRadius="4"/>
+                </TextBlock.Effect>
+            </TextBlock>
+        </Viewbox>
+
+
+        <Thumb Name="ResizeGripper" DragDelta="ResizeGripper_DragDelta" Height="10" Width="10"
+               Visibility="Hidden"
+               Grid.Row="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               
+               Cursor="SizeNWSE" />
+        <Button x:Name="Close" Click="Close_Click" Height="26" Width="30" Content="X" 
+                HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden"
+                ToolTip="Close HAK"/>
+        <Button x:Name="Settings" Click="Settings_Click" Height="26" Width="100" Content="Settings" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"
+                ToolTip="Open settings window"/>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Horizon.AppointmentKeeper"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="Horizon.AppointmentKeeper.TimePicker"
+        mc:Ignorable="d"
+   
+        Title="TimePicker" Height="337" Width="178" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid >
+        <!--<dxe:TimePicker Name="TimePickerControl" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" />-->
+        <DatePicker Name="DatePickerControl" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" />
+
+        <Button Content="OK" HorizontalAlignment="Left" Margin="20,273,0,0" VerticalAlignment="Top" Height="24" Width="128" Click="Button_Click" />
+        <Label Content="Pick date and time to target" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
